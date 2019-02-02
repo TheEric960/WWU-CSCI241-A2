@@ -1,5 +1,7 @@
 package avl;
 
+import java.io.ByteArrayInputStream;
+import java.io.InputStream;
 import java.util.HashSet;
 import java.util.Scanner;
 import java.io.File;
@@ -7,14 +9,18 @@ import java.io.FileNotFoundException;
 public class Vocab {
 
     public static void main(String[] args) {
-        //TODO: no argument case
-        for (int i = 0; i < args.length; i++) {
-            try {
-                Scanner sc = new Scanner(new File(args[i]));
-                Count c = wordCount(sc);
-                System.out.println(c);
-            } catch (FileNotFoundException exc) {
-                System.out.println("Could not find file " + args[i]);
+        if (args.length == 0) {
+            Count c = wordCount(new Scanner(System.in));
+            System.out.println(c);
+        } else {
+            for (String f : args) {
+                try {
+                    Scanner sc = new Scanner(new File(f));
+                    Count c = wordCount(sc);
+                    System.out.println(c);
+                } catch (FileNotFoundException exc) {
+                    System.out.println("Could not find file " + f);
+                }
             }
         }
     }
