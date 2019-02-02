@@ -7,10 +7,12 @@ import java.io.FileNotFoundException;
 public class Vocab {
 
     public static void main(String[] args) {
+        // no args entered else scan file
         if (args.length == 0) {
             Count c = wordCount(new Scanner(System.in));
             System.out.println(c);
         } else {
+            // read every file
             for (String f : args) {
                 try {
                     Scanner sc = new Scanner(new File(f));
@@ -27,7 +29,7 @@ public class Vocab {
      * by the given Scanner. return the two values in a Count object.*/
     private static Count wordCount(Scanner sc) {
         Count c = new Count();
-        HashSet<String> set = new HashSet<>();
+        HashSet<String> set = new HashSet<>();  // doesn't allow duplicates
 
         while(sc.hasNext()) {
             String word = sc.next();
