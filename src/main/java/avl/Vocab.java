@@ -1,5 +1,6 @@
 package avl;
 
+import java.util.HashSet;
 import java.util.Scanner;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -21,12 +22,16 @@ public class Vocab {
      * by the given Scanner. return the two values in a Count object.*/
     private static Count wordCount(Scanner sc) {
         Count c = new Count();
-        while(sc.hasNext()){
+        HashSet<String> set = new HashSet<>();
+
+        while(sc.hasNext()) {
             String word = sc.next();
             word = word.replaceAll("[^a-zA-Z ]", "").toLowerCase();
-            // TODO: fill in the unique and total fields of c before c is returned
-            //Hint: Something that stores only unique elements to tally # of uniques
+            set.add(word);
+            c.total += 1;
         }
+
+        c.unique = set.size();
         return c;
     }
 
