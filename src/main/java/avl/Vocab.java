@@ -8,14 +8,15 @@ public class Vocab {
 
     public static void main(String[] args) {
         //TODO: no argument case
-        try{
-            Scanner sc = new Scanner(new File(args[0]));
-            Count c = wordCount(sc);
-            System.out.println(c);
-        }catch(FileNotFoundException exc){
-            System.out.println("Could not find file " +args[0]);
+        for (int i = 0; i < args.length; i++) {
+            try {
+                Scanner sc = new Scanner(new File(args[i]));
+                Count c = wordCount(sc);
+                System.out.println(c);
+            } catch (FileNotFoundException exc) {
+                System.out.println("Could not find file " + args[i]);
+            }
         }
-    
     }
 
     /* count the total and unique words in a document being read
