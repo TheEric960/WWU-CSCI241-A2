@@ -61,13 +61,19 @@ public class AVL {
     /** insert w into the tree, maintaining AVL balance
      *  precondition: the tree is AVL balanced */
     public void avlInsert(String w) {
-        //TODO    
+        if (root == null) {
+            root = new Node(w);
+            size = 1;
+            return;
+        }
+        avlInsert(root, w);
     }
 
     /** insert w into the tree, maintaining AVL balance
      *  precondition: the tree is AVL balanced and n is not null */
     private void avlInsert(Node n, String w) {
-        //TODO    
+        bstInsert(n, w);
+        rebalance(n);
     }
 
     /** do a left rotation: rotate on the edge from x to its right child.
