@@ -133,7 +133,7 @@ public class AVL {
 
     /** returns the balance of the tree */
     private int bal(Node n) {
-        return n.right.height - n.left.height;
+        return height(n.right) - height(n.left);
     }
 
     /** return the height of the tree rooted at n */
