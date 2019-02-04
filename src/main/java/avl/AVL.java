@@ -90,7 +90,26 @@ public class AVL {
     }
 
     public void rebalance(Node n) {
-        //TODO    
+        if (bal(n) < -1) {
+            if (bal(n.left) < 0) {
+                rightRotate(n);
+            } else {
+                leftRotate(n.left);
+                rightRotate(n);
+            }
+        } else {
+            if (bal(n.right) < 0) {
+                rightRotate(n.right);
+                leftRotate(n);
+            } else {
+                leftRotate(n);
+            }
+        }
+    }
+
+    /** returns the balance of the tree */
+    private int bal(Node n) {
+        return n.right.height - n.left.height;
     }
 
     /** return the height of the tree rooted at n */
