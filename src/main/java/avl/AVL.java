@@ -56,6 +56,7 @@ public class AVL {
                 bstInsert(n.left, w);
             }
         }
+        n.height = height(n);
     }
 
     /** insert w into the tree, maintaining AVL balance
@@ -90,6 +91,28 @@ public class AVL {
 
     public void rebalance(Node n) {
         //TODO    
+    }
+
+    /** return the height of the tree rooted at n */
+    private int height(Node n) {
+        if (n == null) {
+            return -1;
+        } else if (isLeaf(n)) {
+            return 0;
+        }
+
+        // want branch with greatest height
+        if (height(n.left) > height(n.right)) {
+            return 1 + height(n.left);
+        } else {
+            return 1 + height(n.right);
+        }
+    }
+
+    /** return true if Node n is a leaf node. a null node is not considered
+     * a leaf. */
+    private boolean isLeaf(Node n) {
+        return n != null && n.left == null && n.right == null;
     }
 
     /** inner class representing a node in the tree. */
