@@ -129,11 +129,21 @@ public class AVL {
                 leftRotate(n);
             }
         }
+        resetHeights(n);
     }
 
     /** returns the balance of the tree */
     private int bal(Node n) {
         return height(n.right) - height(n.left);
+    }
+
+    /** fixes heights after rebalancing */
+    private void resetHeights(Node n) {
+        n.height = height(n);
+        if (n.right != null)
+            resetHeights(n.right);
+        if (n.left != null)
+            resetHeights(n.left);
     }
 
     /** return the height of the tree rooted at n */
