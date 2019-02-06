@@ -175,7 +175,7 @@ public class AVL {
 
     /** print a sideways representation of the tree - root at left,
      * right is up, left is down. */
-    public void printTree() {
+    private void printTree() {
         printSubtree(root, 0);
     }
     private void printSubtree(Node n, int level) {
