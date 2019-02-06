@@ -173,6 +173,23 @@ public class AVL {
         return n != null && n.left == null && n.right == null;
     }
 
+    /** print a sideways representation of the tree - root at left,
+     * right is up, left is down. */
+    public void printTree() {
+        printSubtree(root, 0);
+    }
+    private void printSubtree(Node n, int level) {
+        if (n == null) {
+            return;
+        }
+        printSubtree(n.right, level + 1);
+        for (int i = 0; i < level; i++) {
+            System.out.print("        ");
+        }
+        System.out.println(n.word);
+        printSubtree(n.left, level + 1);
+    }
+
     /** inner class representing a node in the tree. */
     public class Node {
         public String word;
@@ -207,22 +224,4 @@ public class AVL {
             right = r;
         }
     }
-
-    /** print a sideways representation of the tree - root at left,
-     * right is up, left is down. */
-    public void printTree() {
-        printSubtree(root, 0);
-    }
-    private void printSubtree(Node n, int level) {
-        if (n == null) {
-            return;
-        }
-        printSubtree(n.right, level + 1);
-        for (int i = 0; i < level; i++) {
-            System.out.print("        ");
-        }
-        System.out.println(n.word);
-        printSubtree(n.left, level + 1);
-    }
-
 }
