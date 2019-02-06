@@ -194,12 +194,12 @@ public class AVL {
     // ENHANCEMENTS
     ///////////////////////////////
 
-    /** Removes a node based on a word */
+    /** Removes a node based on a word in a bst */
     public String bstRemove(String s) {
         return bstRemove(findNode(s, root));
     }
 
-    /** Removes a node based on a node */
+    /** Removes a node based on a node in a bst */
     public String bstRemove(Node n) {
         if (isLeaf(n)) {
             if (n.parent.left == n) {
@@ -224,6 +224,19 @@ public class AVL {
             bstRemove(k);
         }
         return n.word;
+    }
+
+    /** Removes a node based on a word in a avl */
+    public String avlRemove(String s) {
+        return avlRemove(findNode(s, root));
+    }
+
+    /** Removes a node based on a node in a bst */
+    public String avlRemove(Node n) {
+        String s = bstRemove(n);
+        rebalance(n);
+        resetHeights(n);
+        return s;
     }
 
     /** Finds a node based on a word */
