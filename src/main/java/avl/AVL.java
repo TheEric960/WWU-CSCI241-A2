@@ -190,6 +190,65 @@ public class AVL {
         printSubtree(n.left, level + 1);
     }
 
+    ///////////////////////////////
+    // ENHANCEMENTS
+    ///////////////////////////////
+
+    /** Removes a node based on a word */
+    public String bstRemove(String s) {
+        return bstRemove(findNode(s, root));
+    }
+
+    /** Removes a node based on a node */
+    public String bstRemove(Node n) {
+        if (isLeaf(n)) {
+            if (n.parent.left == n) {
+                n.parent.left = null;
+            } else {
+                n.parent.right = null;
+            }
+            n.parent = null;
+        } else if (n.right == null) {
+            n.left.parent = n.parent;
+            n.parent.left = n.left;
+            n.left = null;
+            n.parent = null;
+        } else if (n.left == null) {
+            n.right.parent = n.parent;
+            n.parent.right = n.right;
+            n.right = null;
+            n.parent = null;
+        } else {
+            Node k = findMin(n.right);
+            n.word = k.word;
+            bstRemove(k);
+        }
+        return n.word;
+    }
+
+    /** Finds a node based on a word */
+    private Node findNode(String s, Node n) {
+        if (s.equals(n.word)) {
+            return n;
+        } else if (s.compareTo(n.word) > 0) {
+            findNode(s, n.right);
+        } else if (s.compareTo(n.word) < 0) {
+            findNode(s, n.left);
+        } else {
+            System.out.println(s + " not found.");
+            return null;
+        }
+        return null;
+    }
+
+    /** Finds the minimum node */
+    private Node findMin(Node n) {
+        if (n == null) {
+            return n;
+        }
+        return findMin(n.left);
+    }
+
     /** inner class representing a node in the tree. */
     public class Node {
         public String word;
