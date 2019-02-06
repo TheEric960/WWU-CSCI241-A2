@@ -75,6 +75,7 @@ public class AVL {
     private void avlInsert(Node n, String w) {
         bstInsert(n, w);
         rebalance(n);
+        resetHeights(n); // rebalancing messes up heights
     }
 
     /** do a left rotation: rotate on the edge from x to its right child.
@@ -114,22 +115,26 @@ public class AVL {
     }
 
     public void rebalance(Node n) {
-        if (bal(n) < -1) {
-            if (bal(n.left) < 0) {
-                rightRotate(n);
-            } else {
-                leftRotate(n.left);
-                rightRotate(n);
-            }
-        } else if (bal(n) > 1){
-            if (bal(n.right) < 0) {
-                rightRotate(n.right);
-                leftRotate(n);
-            } else {
-                leftRotate(n);
+        if (n != null) {
+            rebalance(n.left);
+            rebalance(n.right);
+
+            if (bal(n) < -1) {
+                if (bal(n.left) < 0) {
+                    rightRotate(n);
+                } else {
+                    leftRotate(n.left);
+                    rightRotate(n);
+                }
+            } else if (bal(n) > 1) {
+                if (bal(n.right) < 0) {
+                    rightRotate(n.right);
+                    leftRotate(n);
+                } else {
+                    leftRotate(n);
+                }
             }
         }
-        resetHeights(n);
     }
 
     /** returns the balance of the tree */
