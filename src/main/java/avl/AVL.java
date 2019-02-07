@@ -65,6 +65,7 @@ public class AVL {
         if (root == null) {
             root = new Node(w);
             size = 1;
+            root.count = 1;
             return;
         }
         avlInsert(root, w);
@@ -76,6 +77,7 @@ public class AVL {
         bstInsert(n, w);
         rebalance(n);
         resetHeights(n); // rebalancing messes up heights
+        n.count++;
     }
 
     /** do a left rotation: rotate on the edge from x to its right child.
@@ -233,10 +235,14 @@ public class AVL {
 
     /** Removes a node based on a node in a bst */
     public String avlRemove(Node n) {
-        String s = bstRemove(n);
-        rebalance(n);
-        resetHeights(n);
-        return s;
+        if (n.count == 1) {
+            String s = bstRemove(n);
+            rebalance(n);
+            resetHeights(n);
+            return s;
+        }
+        n.count--;
+        return n.word;
     }
 
     /** Finds a node based on a word */
@@ -269,6 +275,7 @@ public class AVL {
         public Node left;
         public Node right;
         public int height;
+        public int count = 0;
 
         public String toString() {
             return word + "(" + height + ")";
