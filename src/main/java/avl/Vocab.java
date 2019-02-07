@@ -1,3 +1,11 @@
+
+/*
+To include the fourth enhancement, I added another if statement for that
+specific case. I also added a duplicate Count class and HashSet for easier
+counting. I moved the file read-in to a new method to avoid duplicating
+code and to retain original functionality of the original purpose.
+ */
+
 package avl;
 
 import java.util.HashSet;

@@ -1,3 +1,12 @@
+
+/*
+Enhancements aside from ones added to existing methods are added below the
+annotation. I implemented examples from class to complete the enhancements,
+and constructed a findNode method in case the user wants to remove based on
+as string rather than a specific node. As directions method, remove is only
+implemented for the avl tree. Note: remove is named avlRemove.
+ */
+
 package avl;
 
 public class AVL {
