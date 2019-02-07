@@ -1,5 +1,8 @@
-
 /*
+Author: Jack Wilson
+Date: 2/6/2019
+Purpose: Practice creating BST and AVL trees
+
 Enhancements aside from ones added to existing methods are added below the
 annotation. I implemented examples from class to complete the enhancements,
 and constructed a findNode method in case the user wants to remove based on

@@ -1,5 +1,8 @@
-
 /*
+Author: Jack Wilson
+Date: 2/6/2019
+Purpose: Practice creating BST and AVL trees
+
 To include the fourth enhancement, I added another if statement for that
 specific case. I also added a duplicate Count class and HashSet for easier
 counting. I moved the file read-in to a new method to avoid duplicating
