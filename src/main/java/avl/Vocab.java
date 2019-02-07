@@ -1,3 +1,9 @@
+/*
+Author: Jack Wilson
+Date: 2/6/2019
+Purpose: Practice creating BST and AVL trees
+ */
+
 package avl;
 
 import java.util.HashSet;
