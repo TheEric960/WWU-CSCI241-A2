@@ -1,0 +1,54 @@
+> Task :compileJava UP-TO-DATE
+> Task :processResources NO-SOURCE
+> Task :classes UP-TO-DATE
+> Task :compileTestJava
+> Task :processTestResources NO-SOURCE
+> Task :testClasses
+
+> Task :test
+
+avl.AVLTest > test00bstInsertRoot PASSED
+
+avl.AVLTest > test10bstInsert PASSED
+
+avl.AVLTest > test20parentPointers PASSED
+
+avl.AVLTest > test30leftRotate PASSED
+
+avl.AVLTest > test31leftRotate PASSED
+
+avl.AVLTest > test32leftRotate PASSED
+
+avl.AVLTest > test40rightRotate PASSED
+
+avl.AVLTest > test41rightRotate PASSED
+
+avl.AVLTest > test42rightRotate PASSED
+
+avl.AVLTest > test50rebalance PASSED
+
+avl.AVLTest > test51rebalance PASSED
+
+avl.AVLTest > test52rebalance PASSED
+
+avl.AVLTest > test53rebalance PASSED
+
+avl.AVLTest > test54rebalance PASSED
+
+avl.AVLTest > test55rebalance PASSED
+
+avl.AVLTest > test56rebalance PASSED
+
+avl.AVLTest > test57rebalance PASSED
+
+avl.AVLTest > test58rebalance PASSED
+
+avl.AVLTest > test60avlInsert PASSED
+
+avl.AVLTest > test61avlInsert PASSED
+
+avl.AVLTest > test62avlInsert PASSED
+Results: SUCCESS (21 tests, 21 successes, 0 failures, 0 skipped)
+
+BUILD SUCCESSFUL in 0s
+3 actionable tasks: 2 executed, 1 up-to-date

@@ -1,0 +1,101 @@
+Hello! This is TODO grading your A2.
+
+Your total score is TODO / 50
+
+The point breakdown is given in the sections below, corresponding to the
+rubric given on the A2 handout.
+
+==============================
+Hours and submission mechanics
+==============================
+TODO / 1 point:
+Hours spent appear as a lone integer in hours.txt
+
+======================
+Vocab.java Correctness
+======================
+Your Vocab.java was tested with two different inputs from standard input
+and from files given as command line arguments. You can see the output of these
+test cases in vocab_out.txt.  The output of my solution code on these test
+cases is as follows. I've run the code using the -q flag, which tells Gradle to
+keep quiet:
+
+standard input 1:
+14 20
+
+standard input 2:
+1955 8060
+
+1 command line arg:
+14 20
+
+2 command line args:
+14 20
+1955 8060
+
+
+Your scores:
+
+TODO / 3 points:
+Vocab prints the unique and total counts of words from standard input
+
+TODO / 3 points:
+ Vocab prints the unique and total counts of words from each command-line argument
+
+==========
+Efficiency
+==========
+
+TODO / 5 points:
+avlInsert maintains O(log n) performance by keeping track of node heights and updating them as necessary
+
+TODO / 5 points:
+Vocab processes a document with n words in O(n log n) time
+
+=====
+Style
+=====
+
+Inadequate commenting:
+    author, date and purpose should appear in a comment at the top of each file you make changes to
+    methods you introduce should be accompanied by a precise specification
+    non-obvious code sections should be explained in comments
+
+Poor style:
+    indentation should be consistent
+    each method should be written as concisely and clearly as possible
+    methods should not be too long - use private helper methods
+    code should not be cryptic and terse
+    variable and function names should be informative
+
+
+============
+Enhancements
+============
+
+TODO / 2 points:
+remove correctly removes a node from the tree
+
+TODO / 1 point:
+remove maintains AVL balance
+
+TODO / 1 point:
+The tree tracks a count for each node, inserting or incrementing on insertion and decrementing or removing on removal.
+
+TODO / 1 point:
+Sliding window vocabulary tracking is implemented.
+
+
+====================
+AVL.java Correctness
+====================
+
+All of the AVL correctness rubric items are graded by unit testing. The output
+of gradle test is shown in grading_outputs/unittests.txt. You earn 1.33 points
+per unit test, rounded up to the next larger integer.
+
+Total AVL correctness score:
+TODO / 28
+
+
+
