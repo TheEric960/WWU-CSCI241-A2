@@ -1,6 +1,6 @@
-> Task :compileJava UP-TO-DATE
+> Task :compileJava
 > Task :processResources NO-SOURCE
-> Task :classes UP-TO-DATE
+> Task :classes
 > Task :compileTestJava
 > Task :processTestResources NO-SOURCE
 > Task :testClasses
@@ -51,4 +51,4 @@ avl.AVLTest > test62avlInsert PASSED
 Results: SUCCESS (21 tests, 21 successes, 0 failures, 0 skipped)
 
 BUILD SUCCESSFUL in 0s
-3 actionable tasks: 2 executed, 1 up-to-date
+3 actionable tasks: 3 executed
