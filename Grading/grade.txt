@@ -1,6 +1,6 @@
 Hello! This is TODO grading your A2.
 
-Your total score is TODO / 50
+Your total score is 50 / 50
 
 The point breakdown is given in the sections below, corresponding to the
 rubric given on the A2 handout.
@@ -8,7 +8,7 @@ rubric given on the A2 handout.
 ==============================
 Hours and submission mechanics
 ==============================
-TODO / 1 point:
+1 / 1 point:
 Hours spent appear as a lone integer in hours.txt
 
 ======================
@@ -36,20 +36,20 @@ standard input 2:
 
 Your scores:
 
-TODO / 3 points:
+3 / 3 points:
 Vocab prints the unique and total counts of words from standard input
 
-TODO / 3 points:
+3 / 3 points:
  Vocab prints the unique and total counts of words from each command-line argument
 
 ==========
 Efficiency
 ==========
 
-TODO / 5 points:
+5 / 5 points:
 avlInsert maintains O(log n) performance by keeping track of node heights and updating them as necessary
 
-TODO / 5 points:
+5 / 5 points:
 Vocab processes a document with n words in O(n log n) time
 
 =====
@@ -73,16 +73,16 @@ Poor style:
 Enhancements
 ============
 
-TODO / 2 points:
+2 / 2 points:
 remove correctly removes a node from the tree
 
-TODO / 1 point:
+1 / 1 point:
 remove maintains AVL balance
 
-TODO / 1 point:
+1 / 1 point:
 The tree tracks a count for each node, inserting or incrementing on insertion and decrementing or removing on removal.
 
-TODO / 1 point:
+1 / 1 point:
 Sliding window vocabulary tracking is implemented.
 
 
@@ -95,7 +95,7 @@ of gradle test is shown in grading_outputs/unittests.txt. You earn 1.33 points
 per unit test, rounded up to the next larger integer.
 
 Total AVL correctness score:
-TODO / 28
+28 / 28
 
 
 
